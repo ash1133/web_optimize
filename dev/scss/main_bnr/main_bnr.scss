@@ -1,5 +1,5 @@
 .b_main_bnr {
-  height:600px;
+  height:215px;
   position: relative;
   margin: 0 -15px;
 }
@@ -17,6 +17,34 @@
   background-color: $bg_white;
   padding:13px 18px 7px 14px;
   position: absolute;
-  left: 48px;
-  bottom: 33px;
+  left: 15px;
+  bottom: 15px;
+
+  img{
+    width:192px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .b_main_bnr {
+    height: 392px;
+  }
+  .b_main_bnr__img {
+    left: 40px;
+    bottom: 32px;
+  }
+  .b_main_bnr__img img{
+    width:282px;
+    height: 89px;
+  }
+}
+@media (min-width: 992px) {
+  .b_main_bnr {
+    height: 600px;
+  }
+  .b_main_bnr__img img{
+    left: 48px;
+    bottom: 33px;
+  }
 }

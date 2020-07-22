@@ -1,6 +1,23 @@
-.b_header{
-  padding: 15px 45px;
+$w_992: 100%;
+$w_768: 768px;
+$w_576: 540px;
+$w_100: 102%;
+$hh: 90px;
+
+.b_header__fixed{
+  padding-top:$hh;
+  position: relative;
+  z-index: 100;
 }
+.b_header{
+  z-index: 2;
+  top:0;
+  position: fixed;
+  padding: 15px 0;
+  background-color: $bg_white;
+  width: $w_100;
+}
+
 .b_header__logo {
   display: flex;
   flex-wrap: wrap;
@@ -20,23 +37,56 @@
   }
 }
 
+.b_header__nav__btn{
+  display: block;
+
+  .d-n-active{
+    opacity: 1;
+  }
+  .d-active{
+    opacity: 0;
+  }
+
+  &.active{
+    .d-n-active{
+      opacity: 0;
+    }
+    .d-active{
+      opacity: 1;
+    }
+  }
+}
+
 .b_header__nav {
-  display: flex;
-  flex-wrap: wrap;
+  position: fixed;
+  display: none;
+  z-index: 100;
+  top: $hh;
+  width: $w_100;
+  left: 50%;
+  transform: translateX(-50%);
+  height: calc(100% - #{$hh});
+  background-color: $bg_gray;
+  text-align: center;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0;
+  justify-content: flex-start;
+  padding: 50px 20px;
   margin: 0;
   list-style-type: none;
+
+  &.active{
+    display:flex;
+  }
 }
 
 .b_header__nav__item {
-  padding: 0 30px 0 0;
+  padding: 0 0 30px 0;
 
   a {
     font-weight: 600;
     font-size: 20px;
-    color: $f_c_gray;
+    color: $f_c_white;
     text-decoration: none;
     position: relative;
     display: inline-block;
@@ -49,3 +99,59 @@
     border-color: $bg_red;
   }
 }
+
+@media (min-width: 576px){
+  .b_header{
+    width: $w_576;
+  }
+  .b_header__nav {
+    width: $w_576;
+  }
+}
+@media (min-width: 768px){
+  .b_header{
+    width: $w_768;
+    height: 90px;
+    padding: 15px 20px;
+  }
+  .b_header__nav {
+    width: $w_768;
+  }
+}
+@media (min-width: 992px){
+  .b_header__nav__btn{
+    display: none;
+  }
+  .b_header__fixed{
+    padding-top:0;
+  }
+  .b_header{
+    width: $w_992;
+    position: relative;
+    height:auto;
+    padding: 15px 45px;
+  }
+  .b_header__nav {
+    top:initial;
+    width: auto;
+    left: initial;
+    transform:initial;
+    height:initial;
+    position: relative;
+    display: flex;
+    text-align:initial;
+    flex-direction: row;
+    background-color:initial;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .b_header__nav__item {
+    padding: 0 30px 0 0;
+    a{
+      color: $f_c_gray;
+    }
+  }
+}
+

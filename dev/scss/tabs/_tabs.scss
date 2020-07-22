@@ -3,21 +3,21 @@
 }
 
 .b_tabs__title {
-  padding: 0 20px;
+  padding: 0 0;
 }
 
 .b_tabs__list {
+  padding: 0 0;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 35px;
-  padding: 0 20px;
 }
 
 .b_tabs__list__item {
-  margin-right: 70px;
+  font-size: 20px;
+  line-height: 24px;
+  margin-right: 40px;
   font-weight: 600;
-  font-size: 30px;
-  line-height: 34px;
   color: $f_c_black;
   border-bottom: 5px solid transparent;
   cursor: pointer;
@@ -44,13 +44,14 @@
   background-color: $bg_gray;
 }
 
+
 .b_tab__item__text_clear {
   padding: 49px 20px;
 }
 
 .b_tab__item__text {
   color: $f_c_white;
-  padding: 49px 47px;
+  padding: 49px 0;
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
@@ -60,13 +61,14 @@
   }
 }
 
-.b_tab__item__img_fill {
-  max-height: 665px;
+.b_tab__item__img {
   overflow: hidden;
-}
 
-.b_tab__item__video {
-  padding: 76px 120px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .b_tab__item__red {
@@ -75,6 +77,7 @@
   position: relative;
 
   &::after {
+    z-index: 1;
     content: '';
     display: block;
     width: 121px;
@@ -85,8 +88,59 @@
     background-image: url("../img/Union.svg");
   }
 
-  .b_tab__item__text {
-    padding: 49px 200px 49px 0;
+  & * {
+    position: relative;
+    z-index: 2;
   }
 
+  .b_tab__item__text {
+    padding: 49px 0 49px 0;
+  }
+
+}
+
+.b_tab__item__video {
+  padding: 15px 15px 50px;
+
+  video {
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    object-fit: cover;
+    height: 264px
+  }
+}
+
+
+@media (min-width: 768px) {
+  .b_tabs__title {
+    padding: 0 20px;
+  }
+  .b_tabs__list {
+    padding: 0 20px;
+  }
+  .b_tabs__list__item {
+    font-size: 30px;
+    line-height: 34px;
+    margin-right: 70px;
+  }
+  .b_tab__item__text {
+    padding: 49px 0;
+  }
+  .b_tab__item__video video {
+    height: 464px
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .b_tab__item__text {
+    padding: 49px 47px;
+  }
+  .b_tab__item__red .b_tab__item__text {
+    padding: 49px 200px 49px 0;
+  }
+  .b_tab__item__video{
+    padding: 76px 120px;
+  }
 }

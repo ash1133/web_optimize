@@ -3,6 +3,10 @@ body {
   margin: 0;
   padding: 0;
   color: $f_c_gray;
+
+  &.ovf_h{
+    overflow: hidden;
+  }
 }
 
 img {
@@ -11,22 +15,23 @@ img {
 }
 
 .g_main__container {
-  box-shadow: 0 30px 30px rgba(0,0,0,.5);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, .5);
   position: relative;
   background-color: #fff;
 }
 
-header.g_main__container::before{
+header.g_main__container::before {
   content: '';
   position: absolute;
-  box-shadow: 0 -90px 30px rgba(0,0,0,.5);
+  box-shadow: 0 -90px 30px rgba(0, 0, 0, .5);
   background-color: #fff;
-  left:0;
-  right:0;
-  height:100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
 }
 
-.g_img_caption{
+.g_img_caption {
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
@@ -38,27 +43,34 @@ header.g_main__container::before{
   text-align: right;
 }
 
-.g_subtitle{
+.g_subtitle {
   font-weight: 300;
   font-size: 28px;
   line-height: 30px;
 }
-.g_title__with__link{
-  margin-bottom:40px;
+
+.g_title__with__link {
+  margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
 
-  h1{
-    margin-bottom:0;
-    margin-right:20px;
+  h1 {
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+    margin-right: 20px;
   }
-  *{
+
+  * {
     flex: 0 0 auto;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      flex: 0 0 auto;
+      margin-bottom: 0;
+    }
   }
 }
 
-video{
-  outline: none;
-  cursor: pointer;
-}

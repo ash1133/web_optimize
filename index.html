@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="build/css/bootstrap.css">
     <link rel="stylesheet" href="build/css/template_styles.css">
 </head>
 <body>
-    <header class="container g_main__container">
+    <header class="container g_main__container b_header__fixed">
         <div class="row align-items-center b_header">
-            <div class="col-6">
+            <div class="col-xl-6 col-auto">
                 <div class="b_header__logo">
                     <img src="build/img/logo.svg" alt="">
-                    <span>Девелопмент, проектирование,<br />строительство, эксплуатация</span>
+                    <span class="d-md-block d-none">Девелопмент, проектирование,<br />строительство, эксплуатация</span>
                 </div>
             </div>
-            <div class="col-6">
-                <ul class="b_header__nav">
+            <div class="col-xl-6 col text-right">
+                <div class="b_header__nav__btn" data-header-menu-btn>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g class="d-n-active">
+                            <path d="M4.1915 9.95312H45.8378V14.2028H4.1915V9.95312Z" fill="#101010"/>
+                            <path d="M4.19141 22.4591H45.8377V26.7087H4.19141V22.4591Z" fill="#101010"/>
+                            <path d="M4.19141 34.9651H45.8377V39.2147H4.19141V34.9651Z" fill="#101010"/>
+                        </g>
+                        <g class="d-active">
+                            <path d="M28.0629 24.9541L45.3337 7.72944C46.0415 6.90506 45.994 5.67621 45.2244 4.90875C44.4549 4.14129 43.2228 4.09382 42.3962 4.7998L25.1254 22.0244L7.85458 4.77902C7.03766 3.96429 5.71317 3.96429 4.89625 4.77902C4.07933 5.59375 4.07933 6.9147 4.89625 7.72944L22.1879 24.9541L4.89625 42.1787C4.30172 42.6865 4.04275 43.4837 4.22581 44.2427C4.40888 45.0018 5.00308 45.5944 5.76413 45.7769C6.52517 45.9595 7.3246 45.7012 7.83374 45.1083L25.1254 27.8837L42.3962 45.1083C43.2228 45.8143 44.4549 45.7668 45.2244 44.9994C45.994 44.2319 46.0415 43.003 45.3337 42.1787L28.0629 24.9541Z" fill="#A61744"/>
+                        </g>
+                    </svg>
+                </div>
+                <ul class="b_header__nav" data-header-menu>
                     <li class="b_header__nav__item"><a href="#">О компании</a></li>
                     <li class="b_header__nav__item active"><a href="#">Проекты</a></li>
                     <li class="b_header__nav__item"><a href="#">Контакты</a></li>
@@ -28,16 +40,16 @@
         </div>
     </header>
 
-    <section class="container g_main__container">
+    <div class="container g_main__container">
         <div class="b_main_bnr">
             <div class="b_main_bnr__bg"></div>
             <div class="b_main_bnr__img">
                 <img src="build/img/image3.png" alt="">
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="container g_main__container">
+    <div class="container g_main__container">
         <div class="row">
 
             <div class="col-12">
@@ -66,31 +78,29 @@
                     <div class="b_tab__items" data-tabs-item>
                         <div data-tab="0" class="active b_tab__item">
 
-                            <div class="row align-items-center b_tab__item__gray">
-                                <div class="col-6">
+                            <div class="row b_tab__item__gray flex-xl-row flex-column-reverse">
+                                <div class="col-xl-6 col-12">
                                     <div class="b_tab__item__text">
                                         <h1>О проекте</h1>
                                         <p>Строительство Квартала «Новые Котельники» предусматривает 3 очереди строительства: 14 домов переменной этажности высотой от 13 до 25 этажей, 4 детских сада общей вместимостью 630 детей, школу на 1500 мест, медицинский центр, многофункциональный административный комплекс, а также подземные и наземные паркинги. </p>
                                         <p>Строительство Квартала «Новые Котельники» предусматривает 3 очереди строительства: 14 домов переменной этажности высотой от 13 до 25 этажей, 4 детских сада общей вместимостью 630 детей, школу на 1500 мест, медицинский центр, многофункциональный административный комплекс, а также подземные и наземные паркинги. </p>
                                     </div>
                                 </div>
-                                <div class="col-6 pr-0 b_tab__item__img_fill">
+                                <div class="col-xl-6 col-12 pr-0 pl-xl-3 pl-0 b_tab__item__img">
                                     <img src="build/img/Rectangle4.10.jpg" alt="">
                                 </div>
                             </div>
 
-                            <div class="row b_tab__item__red">
+                            <div class="row b_tab__item__red flex-xl-row flex-column-reverse">
 
-                                <div class="col-6 b_tab__item__video">
-                                    <video width="100%" height="464" poster="build/img/Group40.png" preload="none">
-                                        <source src="/examples/media/martynko.mp4" type="video/mp4">
-                                        <source src="/examples/media/martynko.webm" type="video/webm">
-                                        <source src="/examples/media/martynko.ogv" type="video/ogg">
+                                <div class="col-xl-6 col-12 b_tab__item__video">
+                                    <video poster="build/img/Group40.png" preload="none">
+                                        <source src="video/videoplayback.mp4" type="video/mp4">
                                     </video>
                                     <div class="g_img_caption">Cтроительство Индустриальнго парка «Холмогоры»</div>
                                 </div>
 
-                                <div class="col-6">
+                                <div class="col-xl-6 col-12">
                                     <div class="b_tab__item__text">
                                         <h1>Расположение</h1>
                                         <p>Квартал «Новые Котельники» строится в Подмосковье в 1,5 км от МКАД в сегменте «Комфорт +». Проект сочетает в себе все удобства городского проживания и уют тихой загородной жизни.</p>
@@ -143,7 +153,7 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <p class="h3">Маркированый список</p>
-                                        <ul>
+                                        <ul class="list">
                                             <li>Гостиная Анны Павловны начала понемногу наполняться.</li>
                                             <li>Приехала высшая знать Петербурга, люди самые разнородные;</li>
                                             <li>Приехала дочь князя Василия, красавица Элен;</li>
@@ -158,7 +168,7 @@
 
                                     <div class="col-6">
                                         <p class="h3">Нумерованый список</p>
-                                        <ol>
+                                        <ol class="list">
                                             <li>Гостиная Анны Павловны начала понемногу наполняться.</li>
                                             <li>Приехала высшая знать Петербурга, люди самые разнородные;</li>
                                             <li>Приехала дочь князя Василия, красавица Элен;</li>
@@ -195,11 +205,11 @@
             </div>
 
         </div>
-    </section>
+    </div>
 
-    <section class="container g_main__container">
+    <div class="container g_main__container">
         <div class="row b_map">
-            <div class="col-3">
+            <div class="col-xl-3 col-12">
                 <div class="b_map__title">Комплекс</div>
                 <div class="b_map__address">г. Котельники, микрорайон «Южный», ул. Угрешская, напротив дома №6.</div>
 
@@ -209,19 +219,19 @@
                 <div class="b_map__phone">8 495 812-46-46</div>
                 <div class="b_map__address">г. Реутов, ул. Машиностроителей, д. 19/2</div>
             </div>
-            <div class="col-9">
+            <div class="col-xl-9 col-12">
                 <div
                         id="yaMap"
                         data-geo-object='[{"query":"г. Котельники, микрорайон «Южный», ул. Угрешская, напротив дома №6.","title":"Комплекс","marker":"build/img/marker2.png"},{"query":"г. Реутов, ул. Машиностроителей, д. 19/2","title":"Офис продаж","marker":"build/img/marker.png"}]'
                 ></div>
             </div>
         </div>
-    </section>
+    </div>
 
 
-    <section class="container g_main__container">
-        <div class="row b_area_close">
-            <div class="col-5">
+    <div class="container g_main__container">
+        <div class="row b_area_close flex-xl-row flex-column-reverse">
+            <div class="col-xl-5 col-12">
                 <div class="b_area_close__images">
                     <div class="b_area_close__images__item">
                         <img src="build/img/image4.svg" alt="">
@@ -243,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-7">
+            <div class="col-xl-7 col-12">
                 <div class="b_area_close__text">
                     <h2>Места поблизости</h2>
                     <p>Рядом с проектом существует разнообразная и насыщенная коммерческая и социальная инфраструктура. В городе Котельники расположены детские сады, школы, поликлиники, лицеи, спортивная школа олимпийского резерва «Союз», бассейн «Нева», экстрим-парк «Фристайл», магазины, кафе и рестораны.</p>
@@ -251,13 +261,15 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="container g_main__container">
         <div class="row b_footer_order">
             <div class="col-12">
                 <p class="h1">Записаться на консультацию</p>
             </div>
             <form class="b_footer_order__form">
-                <div class="col-6">
+                <div class="col-xl-6 col-12">
                     <label>
                         <input type="text" placeholder="Имя">
                     </label>
@@ -268,39 +280,39 @@
                         <input type="text" placeholder="Email для ответа">
                     </label>
                 </div>
-                <div class="col-6">
+                <div class="col-xl-6 col-12">
                     <label>
                         <textarea placeholder="Ваши вопросы" disabled rows="8"></textarea>
                     </label>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mb-3">
                     <p class="b_footer_order__form__req">Все поля обязательны для заполнения</p>
                 </div>
-                <div class="col-auto">
+                <div class="col-lg-auto col-md-4 mb-3 mb-md-0">
                     <button class="btn btn_large" type="submit">Отправить</button>
                 </div>
-                <div class="col-auto d-flex align-items-center">
+                <div class="col-lg-5 col-md-8 d-flex align-items-center">
                     <div class="b_footer_order__form__agree">
-                        Нажимая «Отправить», я даю <a href="#">согласие на обработку<br>персональных данных</a>
+                        Нажимая «Отправить», я даю <a href="#">согласие на обработку персональных данных</a>
                     </div>
                 </div>
             </form>
         </div>
-    </section>
+    </div>
 
 
     <footer class="container g_main__container">
         <div class="row b_footer">
-            <div class="col-6">
-                <p>© «Русич» , 2018</p>
+            <div class="col-md-6 mb-3 mb-md-0">
+                <p class="text-md-left text-center">© «Русич» , 2018</p>
             </div>
-            <div class="col-6">
-                <p class="text-right">Создание сайта — Individ</p>
+            <div class="col-md-6">
+                <p class="text-md-right text-center">Создание сайта — Individ</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=8d964d9a-60e8-4361-b559-df745e839fd1" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=8d964d9a-60e8-4361-b559-df745e839fd1"></script>
     <script src="build/js/scripts.min.js"></script>
 </body>
 </html>
