@@ -1,0 +1,94 @@
+label {
+  margin-bottom: 30px;
+  display: block;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+input[type="text"] {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: $f_c_gray_light;
+  width: 100%;
+  display: block;
+  background-color: $bg_white;
+  border: 1px solid $border_gray;
+  padding: 19px 18px 16px;
+  outline: none;
+
+  &:focus{
+    border-color: $bg_red;
+  }
+
+  &[disabled]{
+    background: #E9EFF2;
+  }
+}
+
+textarea {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: $f_c_gray_light;
+  width: 100%;
+  display: block;
+  background-color: $bg_white;
+  border: 1px solid $border_gray;
+  padding: 19px 18px 20px;
+  outline:none;
+
+  &:focus{
+    border-color: $bg_red;
+  }
+
+  &[disabled]{
+    background: #E9EFF2;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+
+  & + i {
+    display: inline-block;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    border:1px solid $f_c_gray_light;
+  }
+
+  &:checked + i {
+    border-color: $f_c_red;
+    background-color: $bg_red;
+    background-image: url('../img/checbox.png');
+    background-position:center;
+    background-repeat:no-repeat;
+
+  }
+}
+
+input[type="radio"] {
+  display: none;
+
+  & + i {
+    display: inline-block;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border:1px solid $f_c_gray_light;
+  }
+
+  &:checked + i {
+    border-color: $f_c_red;
+    background-color: $bg_red;
+    background-image: url('../img/radio.png');
+    background-position:center;
+    background-repeat:no-repeat;
+
+  }
+}

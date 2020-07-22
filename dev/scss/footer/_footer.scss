@@ -1,0 +1,16 @@
+$footer_f_color: #A4A4A4;
+$footer_bg_color: #1B1B1B;
+
+.b_footer {
+  background-color:$footer_bg_color;
+  padding: 19px 47px 17px;
+
+  p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color: $footer_f_color;
+    margin-bottom:0;
+    margin-top:0;
+  }
+}

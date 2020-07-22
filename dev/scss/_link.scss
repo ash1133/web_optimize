@@ -1,0 +1,23 @@
+$red: #CB2323;
+
+.g_link__fill{
+  padding:3px 7px 6px;
+
+  span{
+    border-bottom:1px solid rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 300;
+    margin-right:5px;
+  }
+
+  svg{
+    position: relative;
+    top:3px;
+  }
+
+  &.g_link__fill_red{
+    background-color:$red;
+    color:$f_c_white;
+  }
+}

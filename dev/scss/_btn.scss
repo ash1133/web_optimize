@@ -1,0 +1,53 @@
+.btn {
+  outline: none;
+  display: inline-block;
+  background: linear-gradient(270.39deg, rgba(203, 35, 35, 0.74) -0.24%, rgba(170, 65, 65, 0) 98.72%), #A61744;
+  padding: 17px 37px;
+  color: #fff;
+  border:0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+
+  &:hover, &:focus {
+    background: linear-gradient(270.39deg, rgba(244, 92, 27, 0.74) -0.24%, rgba(170, 65, 65, 0) 98.72%), #BF202D;
+  }
+
+  &.btn_outline {
+    border: 2px solid #A61744;
+    padding: 13px 33px;
+    color: #A61744;
+    background: transparent;
+
+    &:hover, &:focus {
+      border: 2px solid #E34A21;
+      color: #E34A21;
+    }
+
+    &:focus {
+      color: transparentize(#E34A21, .7);
+    }
+
+    &[disabled] {
+      border-color: #BFBFBF;
+      color:#BFBFBF;
+      background:transparent;
+    }
+  }
+
+  &[disabled] {
+    background: linear-gradient(269.88deg, rgba(255, 255, 255, 0.46) -4.33%, rgba(255, 255, 255, 0) 101.23%), #C6C6C6;
+  }
+
+  &.btn_large {
+    padding: 27px 54px;
+    font-size: 22px;
+    line-height: 20px;
+  }
+
+  &.btn_small {
+    padding: 8px 15px;
+    font-size: 13px;
+    line-height: 14px;
+  }
+}

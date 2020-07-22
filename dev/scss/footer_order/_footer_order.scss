@@ -1,0 +1,51 @@
+.b_footer_order {
+  background-color: $bg_gray;
+  padding: 62px 181px 95px;
+  position: relative;
+  color: $f_c_white;
+
+
+  &::after {
+    z-index: 1;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 250px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background-image: url('../img/Union2.svg');
+  }
+
+  a {
+    color: $f_c_white;
+    border-color: $f_c_white;
+  }
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    color: $f_c_white;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.b_footer_order__form {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.b_footer_order__form__req {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.b_footer_order__form__agree {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
