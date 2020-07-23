@@ -1,0 +1,31 @@
+@media (min-width: 576px) {
+  #yaMap {
+    height: 540px;
+    margin-left: -80px;
+    margin-right: -20px;
+    margin-top: 50px;
+  }
+  .b_map {
+    padding: 75px 46px 210px 107px;
+  }
+}
+
+@media (min-width: 768px) {
+  #yaMap {
+    height: 640px;
+    margin-left: -60px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 992px){
+}
+
+@media (min-width: 1200px){
+  #yaMap {
+    height: 640px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+}

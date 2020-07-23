@@ -1,0 +1,37 @@
+@media (min-width: 992px){
+  .b_header__nav__btn{
+    display: none;
+  }
+  .b_header__fixed{
+    padding-top:0;
+  }
+  .b_header{
+    width: $w_992;
+    position: relative;
+    height:auto;
+    padding: 15px 45px;
+  }
+  .b_header__nav {
+    top:initial;
+    width: auto;
+    left: initial;
+    transform:initial;
+    height:initial;
+    position: relative;
+    display: flex;
+    text-align:initial;
+    flex-direction: row;
+    background-color:initial;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .b_header__nav__item {
+    padding: 0 30px 0 0;
+    a{
+      color: $f_c_gray;
+    }
+  }
+}
+

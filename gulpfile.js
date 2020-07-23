@@ -17,10 +17,10 @@ gulp.task('bootstrap', function() {
         .pipe(rename("bootstrap.css"))
         .pipe(gulp.dest("./build/css"));
 });
-gulp.task('bootstrap_js', function() {
+/*gulp.task('bootstrap_js', function() {
     return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
         .pipe(gulp.dest("./build/js"));
-});
+});*/
 // end bootstrap
 
 gulp.task("sass", function() {
@@ -49,10 +49,10 @@ gulp.task('svg', function() {
 gulp.task("scripts", function() {
     return gulp.src("./dev/js/**/*.js")
         .pipe(concat('scripts.js'))
-        /*.pipe(javascriptObfuscator({
+        .pipe(javascriptObfuscator({
             compact: true,
             deadCodeInjection: true,
-        }))*/
+        }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest("./build/js"));
 });
@@ -64,4 +64,4 @@ gulp.task('watch', function() {
     gulp.watch('./dev/js/**/*.js', gulp.series('scripts'));
 });
 
-gulp.task('default', gulp.series("bootstrap", "bootstrap_js", "sass", "svg", "img", "scripts", "watch"));
+gulp.task('default', gulp.series("bootstrap", "sass", "svg", "img", "scripts", "watch"));

@@ -1,0 +1,15 @@
+@media (min-width: 768px){
+  .b_header{
+    width: $w_768;
+    height: 90px;
+    padding: 15px 20px;
+  }
+
+  .b_header__logo span {
+    display: block;
+  }
+
+  .b_header__nav {
+    width: $w_768;
+  }
+}

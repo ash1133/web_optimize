@@ -1,6 +1,12 @@
+$image_height: 140px;
+$gr1: rgba(255, 255, 255, 0.83);
+$gr2: #CFCFCF;
+
+
 .b_area_close {
   padding: 147px 0 50px;
-  background: radial-gradient(95.54% 242.06% at 69.1% -4.31%, rgba(255, 255, 255, 0.83) 21.73%, rgba(255, 255, 255, 0.14) 92.86%), #CFCFCF;
+  background: radial-gradient(95.54% 242.06% at 69.1% -4.31%, $gr1 21.73%, rgba(255, 255, 255, 0.14) 92.86%), $gr2;
+  flex-direction: column-reverse;
 }
 
 .b_area_close__images {
@@ -9,7 +15,7 @@
   width: 100%;
 
   .b_area_close__images__item{
-    height: 140px;
+    height: $image_height;
     flex: 0 0 50%;
     max-width: 50%;
     display: block;
@@ -29,15 +35,4 @@
   padding-left:0;
 }
 
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 1200px) {
-  .b_area_close__text {
-    padding-left:150px;
-  }
-  .b_area_close {
-    padding: 147px 118px 127px;
-  }
-}
+@import "area_close_1200";

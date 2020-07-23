@@ -1,0 +1,20 @@
+@media (min-width: 1200px) {
+  .b_tab__item__gray{
+    flex-direction: row;
+  }
+  .b_tab__item__red {
+    flex-direction: row;
+  }
+  .b_tab__item__img{
+    padding-left: 15px;
+  }
+  .b_tab__item__text {
+    padding: 49px 47px;
+  }
+  .b_tab__item__red .b_tab__item__text {
+    padding: 49px 200px 49px 0;
+  }
+  .b_tab__item__video{
+    padding: 76px 120px;
+  }
+}
