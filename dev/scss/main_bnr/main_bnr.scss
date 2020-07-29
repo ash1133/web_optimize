@@ -5,10 +5,12 @@
 }
 
 .b_main_bnr__bg {
-  background-image: url('../img/image2.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   width: 100%;
   height: 100%;
 }
