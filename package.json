@@ -7,7 +7,7 @@
     "@ckeditor/ckeditor5-build-classic": "^20.0.0",
     "@ckeditor/ckeditor5-vue": "^1.0.1",
     "@fancyapps/fancybox": "^3.5.7",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "gulp-javascript-obfuscator": "^1.1.6",
     "jquery": "^3.5.1",
